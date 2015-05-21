@@ -1,0 +1,7 @@
+%h2.center Tacha Product Listings
+%br
+
+#products.transitions-enabled
+  - @parsed_response.each do |products|
+    = products
+    

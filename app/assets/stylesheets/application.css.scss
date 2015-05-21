@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require 'masonry/transitions'
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+// Overwriting bootstrap values before the import
+$body-bg: #ecf0f1;
+$font-family-sans-serif: 'Lato','HelveticaNeue',Helvetica,Arial,sans-serif;
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar-default .navbar-brand {
+    color: rgb(48, 181, 199);
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+#products {
+  margin: 0 auto;
+}
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-weight: 100;
+  color: rgb(48, 181, 199);
+}
