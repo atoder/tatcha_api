@@ -2,6 +2,10 @@
 %br
 
 #products.transitions-enabled
-  - @parsed_response.each do |products|
-    = products
-    
+  - @parsed_response.each do |id, product|
+    .box.panel.panel-default
+      = link_to image_tag(product['image_url']), controller: "products", action: "show", :id => product["entity_id"]
+      .panel-body
+        .product_name= link_to product['name'], controller: "products", action: "show", :id => product["entity_id"]
+        .product_description= link_to product['short_description'].html_safe, controller: "products", action: "show", :id => product["entity_id"]
+

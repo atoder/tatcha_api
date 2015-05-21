@@ -11,6 +11,11 @@
     .container
       .navbar-header
         = link_to "Tacha API", root_path, class: "navbar-brand"
+      .nav.navbar-nav.navbar-right
+        - if @dir == "asc"
+          = link_to "Sort By Desc", root_path(:sort => "desc"), class: "navbar navbar-link"
+        - else
+          = link_to "Sort By Asc", root_path(:sort => "asc"), class: "navbar navbar-link"
 
   .container
     = yield
